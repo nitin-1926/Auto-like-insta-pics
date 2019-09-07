@@ -38,7 +38,6 @@ function sendPostToSlack(media) {
   );
 }
 
-
 app.get('/run', (req, res) => {
   instagramAPI.userMedia(userID).then(
     (result) => {
@@ -71,5 +70,5 @@ app.get('/run', (req, res) => {
   );
 });
 
-app.set('port', (process.env.PORT || 3000));
+app.set('port', 3000);
 app.listen(app.get('port'));
